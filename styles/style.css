@@ -66,6 +66,8 @@ a:hover{
 .header-background{
     background-image: url(../images/header-img.jpg);
     grid-area: image;
+    height: 358px;
+    width: 100%;
 }
 .menu-link{
     font-family: 'Fira Sans Extra Condensed';
