@@ -5,17 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALKK.RU</title>
+    <script src="https://kit.fontawesome.com/566e83a4e6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header class="header">
-        <div class="header-top">
+      <!--  <a href="" class="logo-link" id="logo-link">
+            <img src="images/logo-white.png" alt="logo" class="logo-img">
+            <p class="logo-text">Интернет-
+            агентство</p>
+        </a>  -->
+        <div class="nav-bar" id="nav-bar">
+            <img src="images/nav-bar.png" alt="nav" class="nav-bar-img">
+        </div>
+       
+        <div class="header-menu">
+            
             <a href="" class="logo-link">
-                <img src="images/logo.png" alt="logo" class="logo-img">
+                <img id = "logo-id" alt="logo" class="logo-img-blc">
                 <p class="logo-text">Интернет-
                 агентство</p>
             </a>
-
+            <p class="fa fa-times menu-close" aria-hidden="true"></p>
             <nav class="nav-menu">
                 <a href="#" class="menu-link">Акции</a>
                 <span>/</span>
@@ -24,12 +35,15 @@
                 <a href="#" class="menu-link">Контакты</a>
             </nav>
             <div class="header-phone-block">
-                <a href="#" class="header-phone-whatsap-link">
-                    <img src="images/whatsap.png" alt="phone" class="header-phone-whatsap-img">
-                </a>
-                <a href="#" class="header-phone-viber-link">
-                    <img src="images/viber.png" alt="phone" class="header-phone-viber-img">
-                </a>
+                <div class="social-block">
+                    <a href="#" class="header-phone-whatsap-link">
+                        <img src="images/whatsap.png" alt="phone" class="header-phone-whatsap-img">
+                    </a>
+                    <a href="#" class="header-phone-viber-link">
+                        <img src="images/viber.png" alt="phone" class="header-phone-viber-img">
+                    </a>
+                </div>
+   
                 <a href="tel:+8444123178" class="header-phone-link">
                     8 (444) 123-17-18
                 </a>
@@ -39,9 +53,10 @@
                 <a href="#" class="context-menu-link">Создание сайтов</a>
                 <a href="#" class="context-menu-link">Контекстная реклама</a>
             </nav>
-            <div class="header-background"></div>
+            
         </div>
-        
+        <div class="header-background"><img src="images/header-img.jpg" alt="" class="header-background-img"></div>
     </header>
 </body>
+<script type="text/javascript" src="js/main.js"></script>
 </html>
