@@ -26,6 +26,8 @@ a:hover{
                             "page-menu page-menu page-menu"
                             "image image image";
     align-items: center;
+    background: linear-gradient(0deg, #F5F7F9, #F5F7F9), #ECE8E5;
+    padding-bottom: 0;
 }
 .logo-link{
     display: flex;
@@ -164,8 +166,138 @@ a:hover{
     color: #FFFFFF;
     padding: 9px 0;
 }
+.header-background{
+      margin-top: 0;
+  }
 
 
+.section-title{
+    font-family: 'Fira Sans Extra Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+}
+.calculation{
+    padding: 10% 15% 7%;
+    background: linear-gradient(0deg, 
+    #F5F7F9, #F5F7F9), 
+    #ECE8E5;
+}
+.calculation-container{
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F4F7FE;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 45px 47px;
+
+}
+.calculation-inputs-fields{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+}
+.calculation-dropdown{
+    display: flex;
+}
+.dropdown-type{
+    margin-right: 10px;
+    background: linear-gradient(0deg, 
+    #EAECEF, #EAECEF), #EAECEF;
+    border-radius: 5px;
+    padding: 8px 18px;
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    opacity: 0.9;
+    list-style: none;
+    position: relative;
+}
+.dropdown-arrow{
+    margin-left: 12px;
+    opacity: 0.8;
+}
+.dropdown-open{
+    transform: rotate(-180deg);
+}
+.dropdown-list{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    list-style: none;
+    background: #EAECEF;
+    border-radius: 10px;
+    width: 200px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.list-visible{
+    display: flex;
+}
+.dropdown-item{
+    padding-top: 9px;
+    padding-left: 16px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    width: 189px;
+    border-radius: 10px;
+}
+.dropdown-item:hover{
+    background-color: #fff;
+    cursor: pointer;
+}
+.dropdown-opacity{
+    opacity: 1;
+}
+.calculation-site-input{
+    display: flex;
+    justify-content: space-between;;
+}
+.calculation-input{
+    
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.calculation-input+label{
+    display: inline-flex;
+    align-items: center;
+    
+}
+.calculation-input+label::before{
+    content: '';
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.calculation-input:checked+label::before{
+    background-image: url("../images/input-checked-img.png");
+}
+.calculation-input:checked:hover+label::before{
+ 
+    background-image: url("../images/input-checked-hover-img.png");
+}
 @media (max-width: 980px) {
     .header{
         z-index: 0;
@@ -177,6 +309,7 @@ a:hover{
         align-items: end;
         color: white;
         padding-left: 20px;
+        padding-bottom: 20px;
     }
     .nav-menu, .header-phone-block, .context-menu{
         display: none;
@@ -229,8 +362,8 @@ a:hover{
     }
     
     .header-background{
-        margin-top: 20px;
-        height: 156px;
+      /*  margin-top: 20px;
+        height: 156px;*/
     }
     .menu-link, .header-phone-block a{
         color: white;
@@ -239,23 +372,36 @@ a:hover{
         display: block;
         z-index: 3;
     }
-    /*.nav-bar:hover ~.header-menu{
-        display: flex;
+    .calculation-container{
+        padding: 40px 40px;
+    }
+    .calculation-inputs-fields{
+        flex-direction: column;
+    }
+    .calculation-dropdown{
+        margin-top: 30px;
         flex-direction: column;
         width: 100%;
-        z-index: 2;
-        color: white;
+       
     }
-    .nav-bar:hover .logo-link{
-        z-index: 3;
-    }
-    .nav-bar:hover ~.header-menu .logo-link-nav-bar{
-        
-        width: 100%;
-        
-    }
-    .header-menu:hover{
+    .dropdown-type{
+        margin-bottom: 10px;
         display: flex;
-    }*/
-
+        justify-content: space-between;
+        z-index: 2;
+    }
+    .dropdown-type:last-child{
+        z-index: 0;
+    }
+    .dropdown-type:first-child{
+        z-index: 4;
+    }
+    .dropdown-list{
+        width: 100%;
+    }
+    .calculation-site-input{
+        margin-top: 20px;
+        width: 100%;
+    }
+    
 }
